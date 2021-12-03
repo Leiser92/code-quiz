@@ -26,6 +26,12 @@ body {
     margin-top: 15px;
     font-size: 30px;
     color:aqua;
+    display: inline-flex;
+    
+}
+
+#countdown {
+    margin-left: 10px;
 }
 
 h1 {
@@ -77,12 +83,13 @@ h1 {
 
 .answers {
     align-items: center;
-    margin-left: 285px;
+    font-size: 25px;
     margin-top:25px;
     width: 50%;
     height: 50px;
-    border-radius: 25%;
+    border-radius: 25px;
     justify-content: space-around;
+    display: inline-block;
     
 }
  .answers:hover {

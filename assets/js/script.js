@@ -1,10 +1,10 @@
-//global variables
+//starting variables
 const intro = document.getElementById("intro");
 const timer = document.getElementById("countdown");
 const startBtn = document.getElementById("start-btn");
 const quizQuestions = document.getElementById("quizQuestions");
 const answer = document.getElementById("answer");
-let timeLeft = 60;
+let timeLeft = 5;
 let questionNum = 0;
 
 
@@ -57,12 +57,13 @@ const questions = [
 
 //timer
 function setTimer() {
-    let timeInterval = setInterval(function (){
+    const timeInterval = setInterval(function (){
         timer.textContent = timeLeft;
         timeLeft--;
 
-        if (timeLeft <= 0) {
+        if (timeLeft < 0) {
             clearInterval(timeInterval);
+            alert('Out of time');
             endGame();
         }
     }, 1000);
@@ -102,11 +103,11 @@ function startQuiz() {
   //checking for correct answer
   function correctAnswer(event) {
     if (event.target.textContent === questions[questionNum].answer) {
-      alert("Correct!");
+      alert("Correct");
     
     } else {
-      alert("Incorrect!");
-      
+      alert("Incorrect");
+      timeLeft -= 10;
     }
     questionNum++;
     nextQuestion();
@@ -121,6 +122,11 @@ function startQuiz() {
       endQuiz();
     }
   };
+
+  function endQuiz () {
+      timeLeft = 0;
+      clearInterval(timeInterval);
+  }
   
 
 
