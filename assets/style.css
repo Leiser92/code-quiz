@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     background: linear-gradient(#365050, #19114063);
     height: 100%;
@@ -21,7 +25,7 @@ body {
 .timer {
     margin-top: 15px;
     font-size: 30px;
-    color:orange;
+    color:aqua;
 }
 
 h1 {
@@ -46,27 +50,43 @@ h1 {
 
 }
 
-.start-btn .btn {
+
+.btn {
     width: 150px;
     height: 50px;
     border-radius: 25px;
 }
 
+.btn:hover {
+    background-color: aqua;
+}
 
+#quiz-box {
+    display: flex;
+    justify-content: space-around;
+}
 
-footer {
+#question {
     display: flex;
     justify-content: center;
-    padding: 25px;
-    width: auto;
+    font-size: 25px;
+    
 }
 
 
 
-
-/* .restart {
-    border-radius: 25px;
-    width: 150px;
+.answers {
+    align-items: center;
+    margin-left: 285px;
+    margin-top:25px;
+    width: 50%;
     height: 50px;
-    margin-top: 250px;
-} */
+    border-radius: 25%;
+    justify-content: space-around;
+    
+}
+ .answers:hover {
+     background-color: aqua;
+ }
+
+
