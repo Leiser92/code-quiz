@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Timed Code Quiz</title>
+</head>
+
+<body>
+    <!-- highscore and timer function -->
+    <header>
+        <div class = "highscore">
+           <a href=""> Highscores</a>
+        </div>
+      <div class="timer">
+        <p>Time Left:</p>  
+        <p id="countdown"></p>
+      </div>
+    </header>
+
+  <main>
+    <!-- intro section -->
+    <section class="intro" id="intro">
+      <h1>
+        Timed Code Quiz
+      </h1>
+     <p class="rule">
+        After you start the quiz a 60 second timer will start.
+        If you get a question wrong then 10 seconds will be deducted from the timer.
+     </p> 
+        <!-- start Quiz button -->
+        <div class="start-btn" id="start-btn">
+            <button class=btn>Start Quiz</button>
+        </div>
+    </section> 
+    
+    <section class="questions" id="quiz-questions">
+
+    </section>
+    <section id="answer">
+
+    </section>
+  </main>
+
+        <!-- <footer>
+            <div class="replay-btn">
+                <button class="restart">Replay Quiz</button>
+            </div>
+        </footer> -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
