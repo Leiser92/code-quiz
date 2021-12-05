@@ -4,7 +4,7 @@ const timer = document.getElementById("countdown");
 const startBtn = document.getElementById("start-btn");
 const quizQuestions = document.getElementById("quizQuestions");
 const answer = document.getElementById("answer");
-let timeLeft = 5;
+let timeLeft = 60;
 let questionNum = 0;
 
 
@@ -123,9 +123,11 @@ function startQuiz() {
     }
   };
 
+
   function endQuiz () {
       timeLeft = 0;
       clearInterval(timeInterval);
+      
   }
   
 
